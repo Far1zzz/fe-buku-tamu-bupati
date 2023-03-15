@@ -55,7 +55,8 @@ const WebcamPemkab = ({ formData, setFormData }) => {
               }}
               className="webcam-btn"
             >
-              Ambil Ulang
+              <i class="bi bi-arrow-repeat"></i>
+              <i class="bi bi-camera"></i>
             </button>
           ) : (
             <button
@@ -65,7 +66,7 @@ const WebcamPemkab = ({ formData, setFormData }) => {
               }}
               className="webcam-btn"
             >
-              Ambil
+              <i class="bi bi-camera"></i>
             </button>
           )}
           {preview ? (

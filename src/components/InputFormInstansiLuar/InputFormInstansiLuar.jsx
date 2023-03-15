@@ -17,7 +17,8 @@ const InputFormInstansiLuar = () => {
     jabatan: "",
     keperluan: "",
     detail_Keperluan: "",
-    jumlahTamu: "",
+    jumlahTamu: 1,
+    detailTamu: "",
     tujuan: "",
   });
 

@@ -56,7 +56,8 @@ const WebcamUmum = ({ formData, setFormData }) => {
               }}
               className="webcam-btn"
             >
-              <i class="bi bi-camera"></i> Ambil Ulang
+              <i class="bi bi-arrow-repeat"></i>
+              <i class="bi bi-camera"></i>
             </button>
           ) : (
             <button
@@ -66,7 +67,7 @@ const WebcamUmum = ({ formData, setFormData }) => {
               }}
               className="webcam-btn"
             >
-              <i class="bi bi-camera"></i> Ambil
+              <i class="bi bi-camera"></i>
             </button>
           )}
           {preview ? (

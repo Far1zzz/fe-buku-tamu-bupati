@@ -22,12 +22,19 @@
 
 .button-webcam button {
   border: none;
-  border-radius: 10px;
-  width: 100px;
+  width: 50px;
+  border-radius: 5px;
+  height: 35px;
   padding: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
   background-color: aqua;
+}
+
+.webcam-btn i {
+  position: absolute;
+  font-weight: bold;
+  font-size: 30px;
 }

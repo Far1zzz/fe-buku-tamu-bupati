@@ -5,6 +5,7 @@ const FormUmum = ({ formData, setFormData }) => {
   const [showHide, setShowHide] = useState("");
   const [hideKeperluan, setHideKeperluan] = useState("");
   const [hideStatus, setHideStatus] = useState("");
+  const [hideDetailTamu, setHideDetailTamu] = useState("");
 
   return (
     <>
@@ -145,28 +146,12 @@ const FormUmum = ({ formData, setFormData }) => {
                 bordered={false}
                 options={[
                   {
-                    value: "Kepala Dinas",
-                    label: "Kepala Dinas",
+                    value: "Bupati",
+                    label: "Bupati",
                   },
                   {
-                    value: "Sekretaris Dinas",
-                    label: "Sekretaris Dinas",
-                  },
-                  {
-                    value: "Bidang Aptika",
-                    label: "Bidang Aptika",
-                  },
-                  {
-                    value: "Bidang Informasi Kom.Publik",
-                    label: "Bidang Informasi Kom.Publik",
-                  },
-                  {
-                    value: "Bidang Statistik",
-                    label: "Bidang Statistik",
-                  },
-                  {
-                    value: "Bidang Persandian",
-                    label: "Bidang Persandian",
+                    value: "Wakil Bupati",
+                    label: "Wakil Bupati",
                   },
                 ]}
               />
@@ -245,16 +230,28 @@ const FormUmum = ({ formData, setFormData }) => {
                     ...formData,
                     jumlahTamu: e.target.value,
                   });
+                  setHideDetailTamu(e.target.value);
                 }}
               />
             </div>
 
-            <label htmlFor="">
-              Silahkan Isi Nama<small>*(Wajib Diisi)</small>
-            </label>
-            <div className="input-umum-more">
-              <textarea type="text" />
-            </div>
+            {hideDetailTamu > 1 && (
+              <>
+                {" "}
+                <label htmlFor="">
+                  Silahkan Isi Nama<small>*(Wajib Diisi)</small>
+                </label>
+                <div className="input-umum-more">
+                  <textarea
+                    value={formData.detailTamu}
+                    onChange={(e) => {
+                      setFormData({ ...formData, detailTamu: e.target.value });
+                    }}
+                    type="text"
+                  />
+                </div>
+              </>
+            )}
           </div>
         </div>
       </div>
